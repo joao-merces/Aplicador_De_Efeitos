@@ -1,0 +1,19 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 15px;
+}
+
+.modder {
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 15px;
+}
+
+.modder > div {
+    margin-bottom: 3% !important; /* ou outro valor desejado */
+}

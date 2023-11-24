@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Modder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="modder">
+
+        <div class="custom-file d-flex justify-content-center align-items-center">
+            <input type="file" class="custom-file-input" id="audioFile" accept=".mp3" style="display: none;">
+            <label class="custom-file-label" for="audioFile">Escolha um arquivo de áudio MP3</label>
+            <button class="btn btn-primary" onclick="document.getElementById('audioFile').click()">Selecionar Arquivo</button>
+        </div>
+
+        <div class="audioPlayer d-flex justify-content-center align-items-center">
+            <audio id="originalAudio" controls></audio>
+        </div>
+
+        <div class="eco d-flex justify-content-center align-items-center">
+            <button onclick="applyEcho()" class = "btn btn-primary d-flex justify-content-center align-items-center">Aplicar Delay</button>
+        </div>
+
+        <div class="reverb d-flex justify-content-center align-items-center">
+            <button onclick="applyReverb()" class="btn btn-primary">Aplicar Reverb</button>
+        </div>
+
+        <div class="compressor d-flex justify-content-center align-items-center">
+            <button onclick="applyCompressor()" class="btn btn-primary">Aplicar Compressor</button>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</body>
+</html>

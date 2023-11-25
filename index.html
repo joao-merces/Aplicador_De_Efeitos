@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice Modder</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
 </head>
 <body>
     
@@ -20,6 +21,10 @@
             <audio id="originalAudio" controls></audio>
         </div>
 
+        <div class="audioPlayer d-flex justify-content-center align-items-center">
+            <div id="waveform"></div>
+        </div>
+
         <div class="eco d-flex justify-content-center align-items-center">
             <button onclick="applyEcho()" class = "btn btn-primary d-flex justify-content-center align-items-center">Aplicar Delay</button>
         </div>
@@ -32,10 +37,16 @@
             <button onclick="applyCompressor()" class="btn btn-primary">Aplicar Compressor</button>
         </div>
 
+        <div class="amplifier d-flex justify-content-center align-items-center">
+            <button onclick="applyAmplifier()" class="btn btn-primary">Aplicar Amplificador</button>
+        </div>
+
     </div>
 
     <script src="scripts.js"></script>
+    <script src="https://cdn.rawgit.com/audiocogs/mp3-buffer/master/index.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </body>
 </html>

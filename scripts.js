@@ -5,6 +5,21 @@ document.getElementById('audioFile').addEventListener('change', function(e) {
   audioElement.src = URL.createObjectURL(file);
 });
 
+async function applyAmplifier() {
+  const audioElement = document.getElementById('originalAudio');
+  const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  const source = audioContext.createMediaElementSource(audioElement);
+  const destination = audioContext.destination;
+
+  const pitchNode = audioContext.createGain();
+  pitchNode.gain.value = 5;
+
+  source.connect(pitchNode);
+  pitchNode.connect(destination);
+
+  audioElement.play();
+}
+
 function applyEcho() {
   const audioElement = document.getElementById('originalAudio');
   const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -83,4 +98,3 @@ function applyCompressor() {
 
   audioElement.play();
 }
-
